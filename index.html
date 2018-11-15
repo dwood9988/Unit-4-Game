@@ -8,32 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 
-  
+
 </head>
 
 <body>
 
     <h1>Crystal Collector!</h1>
-    <div class="instructions" style >
+    <div class="instructions" style>
         <h2>Instructions</h2>
-        <p>You will be given a random number at the start of the game.</p>
-        <p>There are four crystals below. By clicking on the crystal, you will add a specific amount of points to your
+        <p>You will be given a random Goal at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your
             Total Score.</p>
-        <p>You will the game by matching your Total Score to the random Goal you were given at the start. You will
+        <p>You will win the game by matching your Total Score to the random Goal you were given at the start. You will
             lose the game if your Total Score goes above the Goal.</p>
         <p>The value of each crystal is hidden from you until you click on it.</p>
         <p>Each time the crystal game starts, the game will change the values of each crystal.</p>
         <p>Good Luck! </p>
+        <div id="wins">Wins:</div>
+        <div id="losses">Losses:</div>
+
     </div>
 
-    <div class = "crystals"> 
+    <div class="crystals">
     </div>
-        <div id ="randomGoal">Goal</div>
+    <div id="randomGoal">Goal</div>
+    <div id="totalScore">Total Score</div>
+
 
     </div>
 

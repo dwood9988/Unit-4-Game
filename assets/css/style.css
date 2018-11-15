@@ -13,3 +13,18 @@ align-items: center;
     border: 1px solid black;
     margin: 25px;
 }
+
+#randomGoal {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+   display: inline-block;
+
+}
+
+#totalScore {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+   display: inline-block;
+}
