@@ -4,13 +4,13 @@ var goal;
 var wins = 0;
 var losses = 0;
 var previousScore = 0;
-
+var randomGoal = 0;
 
 var beginGame = function () {
     // empty the crystals at the start of each begin game function
     $(".crystals").empty();
     // assign a random goal for the user
-    var randomGoal = Math.floor(Math.random() * 101) + 19;
+    randomGoal = Math.floor(Math.random() * 101) + 19;
 
 
     $("#randomGoal").html("Goal: " + "<br>" + randomGoal);
@@ -25,27 +25,21 @@ var beginGame = function () {
         crystal.attr({
             "class": "crystal",
             "data-random": randomValue
-
         });
 
-
-
         $(".crystals").append(crystal);
-
     }
-
 }
 
 beginGame();
-var reset = function () {
-    
-}
 
 $(document).on('click', ".crystal", function () {
 
     var crystalNumber = parseInt($(this).attr('data-random'));
     previousScore += crystalNumber;
     console.log(previousScore);
+    console.log(randomGoal);
+    
 
     if (previousScore > randomGoal) {
         console.log("YOU LOSE!");
@@ -54,7 +48,6 @@ $(document).on('click', ".crystal", function () {
         previousScore = 0;
         console.log(losses);
         beginGame();
-
     }
     else if (previousScore === randomGoal) {
         console.log("YOU WIN!");
@@ -63,7 +56,6 @@ $(document).on('click', ".crystal", function () {
         previousScore = 0;
         console.log(wins);
         beginGame();
-
     }
 
 });
