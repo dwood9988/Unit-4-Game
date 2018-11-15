@@ -26,7 +26,11 @@ var beginGame = function () {
             "class": "crystal",
             "data-random": randomValue
         });
-
+        //add an attribute for image
+        var img = $("<img>");
+            img.attr("style", "height:150px");
+            img.attr("src", "assets/images/crystal" + i + ".png");
+        crystal.html(img);
         $(".crystals").append(crystal);
     }
 }
@@ -48,6 +52,8 @@ $(document).on('click', ".crystal", function () {
         losses++;
         $("#losses").html("Losses:" + losses);
         previousScore = 0;
+        $("#totalScore").html("Total Score: " + "<br>" + 0);
+
         console.log(losses);
         beginGame();
     }
@@ -56,6 +62,8 @@ $(document).on('click', ".crystal", function () {
         wins++;
         $("#wins").html("Wins:" + wins);
         previousScore = 0;
+        $("#totalScore").html("Total Score: " + "<br>" + 0);
+
         console.log(wins);
         beginGame();
     }
