@@ -14,7 +14,7 @@ var beginGame = function () {
 
 
     $("#randomGoal").html("Goal: " + "<br>" + randomGoal);
-
+    
 // generates 4 crystals
     for (let i = 0; i < 4; i++) {
         // each crystal gets a random number value from 1-12 
@@ -39,10 +39,12 @@ $(document).on('click', ".crystal", function () {
     previousScore += crystalNumber;
     console.log(previousScore);
     console.log(randomGoal);
+
+    $("#totalScore").html("Total Score: " + "<br>" + previousScore);
     
 
     if (previousScore > randomGoal) {
-        console.log("YOU LOSE!");
+        alert("YOU LOSE!");
         losses++;
         $("#losses").html("Losses:" + losses);
         previousScore = 0;
@@ -50,7 +52,7 @@ $(document).on('click', ".crystal", function () {
         beginGame();
     }
     else if (previousScore === randomGoal) {
-        console.log("YOU WIN!");
+        alert("YOU WIN!");
         wins++;
         $("#wins").html("Wins:" + wins);
         previousScore = 0;
