@@ -41,8 +41,7 @@ $(document).on('click', ".crystal", function () {
 
     var crystalNumber = parseInt($(this).attr('data-random'));
     previousScore += crystalNumber;
-    console.log(previousScore);
-    console.log(randomGoal);
+   
 
     $("#totalScore").html("Total Score: " + "<br>" + previousScore);
     
